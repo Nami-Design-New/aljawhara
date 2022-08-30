@@ -1,18 +1,20 @@
-$mainColor: #dcb065;
-$secondColor: #09463f;
+$mainColor: #09463f;
+$secondColor: #dcb065;
 $gold: #ffd700;
 $white-color: #ffffff;
 $black-color: #292929;
+$body-color: #fdfdfd;
+$text-color: #777777;
 $transition: all 0.3s ease-in-out;
 $shadow: 0px 2px 4px #00000020;
 $BigShadow: 0px 8px 24px #00000020;
 @font-face {
-  font-family: bukra;
+  font-family: montserrat;
   font-display: swap;
-  src: url(../webfonts/bukra.woff2);
+  src: url(../webfonts/montserrat-Arabic-Regular.woff);
 }
 * {
-  font-family: "bukra";
+  font-family: "montserrat";
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -81,7 +83,7 @@ img {
   box-shadow: none;
 }
 body {
-  background-color: #fdfdfd;
+  background-color: $body-color;
 }
 content {
   min-height: 50vh;
@@ -289,7 +291,6 @@ span.select2.select2-container.select2-container--default {
     animation: flipInY 1.5s infinite alternate;
     margin-bottom: 30px;
   }
-
   .spinner {
     display: block;
     position: relative;
@@ -298,12 +299,11 @@ span.select2.select2-container.select2-container--default {
     border: 1px solid #dcb06530;
     border-radius: 10px;
     overflow: hidden;
-
     &::after {
       content: "";
       width: 40%;
       height: 100%;
-      background: $mainColor;
+      background: $secondColor;
       position: absolute;
       top: 0;
       left: 0;
@@ -311,7 +311,6 @@ span.select2.select2-container.select2-container--default {
       animation: animloader 2s linear infinite;
       border-radius: 100px;
     }
-
     @keyframes animloader {
       0% {
         left: 0;
@@ -324,20 +323,262 @@ span.select2.select2-container.select2-container--default {
     }
   }
 }
-
-
-
-
-#navbar {
-  background-color: #333;
-  position: fixed;
+header {
+  position: sticky;
   top: 0;
-  width: 100%;
-  display: block;
+  left: 0;
+  z-index: 1024;
   transition: $transition;
+  padding: 30px 0;
+  margin-bottom: 20px;
+  .navbar-nav {
+    align-items: center;
+  }
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+    img {
+      height: 50px;
+      transition: $transition;
+      width: 100%;
+      object-fit: contain;
+      @media (max-width: 480px) {
+        height: 40px;
+      }
+    }
+  }
+  .nav-link {
+    color: $black-color;
+    transition: $transition;
+    font-size: 12px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 3px;
+    padding: 8px 4px;
+    i {
+      font-size: 14px;
+    }
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      background-color: $secondColor;
+      margin-left: 5px;
+      border-radius: 100px;
+      transition: $transition;
+      position: absolute;
+      right: -10px;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover,
+    &:focus {
+      color: $secondColor !important;
+      &::before {
+        right: 0px;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .sideBtn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    cursor: pointer;
+    transition: $transition;
+    z-index: 99999;
+    span {
+      position: absolute;
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: $mainColor;
+      margin: 4px 0;
+      transition: $transition;
+      &:first-child {
+        top: 0;
+      }
+      &:nth-child(2) {
+        width: 10px;
+        top: 7px;
+      }
+      &:nth-child(3) {
+        width: 16px;
+        bottom: 0;
+      }
+    }
+    &:not(.active):hover span:first-child {
+      width: 16px;
+    }
+    &:not(.active):hover span:nth-child(2) {
+      width: 20px;
+    }
+    &.active {
+      span {
+        background-color: $mainColor !important;
+        &:first-child {
+          transform: rotate(45deg);
+          top: 8px;
+          width: 20px;
+        }
+        &:nth-child(2) {
+          width: 0;
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg);
+          top: 8px;
+          width: 20px;
+        }
+      }
+    }
+  }
+  .sideMenu {
+    position: fixed;
+    z-index: 99998;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    background-color: $body-color;
+    padding: 50px 24px;
+    transition: $transition;
+    width: 100%;
+    &.active {
+      right: 0px;
+    }
+    .sideMenuInner {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      justify-content: center;
+      height: 100%;
+      .sideMenuLink {
+        position: relative;
+        display: block;
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 5px;
+        color: $black-color;
+        padding: 5px 0;
+        transition: $transition;
+       &:hover{
+        color: $secondColor;
+       }
+      }
+      
+    }
+  }
+  .dropdown {
+    text-align: center;
+    .dropdown-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::after {
+        border: none !important;
+        content: "\f104" !important;
+        // font-weight: 900;
+        font-family: "Font Awesome 6 Pro";
+        transition: $transition;
+        margin-right: 5px;
+        width: 10px !important;
+      }
+    }
+    &:hover {
+      .dropdown-toggle {
+        &::after {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    .dropdown-menu {
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      animation-name: fadeOutDown !important;
+      animation-delay: 0s;
+      background-color: $white-color;
+      box-shadow: $BigShadow;
+      padding: 5px 0;
+      right: unset;
+      top: 100%;
+      left: -50%;
+      margin-top: 0;
+      border: none;
+      // text-align: center;
+      a {
+        border-radius: 2px;
+        padding: 8px 12px;
+        padding-right: 16px;
+        margin-bottom: 5px;
+        position: relative;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        &::before {
+          content: "";
+          width: 4px;
+          height: 4px;
+          background-color: $secondColor;
+          margin-left: 5px;
+          border-radius: 100px;
+          transition: $transition;
+          position: relative;
+          right: -10px;
+          opacity: 0;
+          visibility: hidden;
+        }
+        &:hover,
+        &:focus {
+          color: $secondColor !important;
+          &::before {
+            right: 0px;
+            opacity: 1;
+            visibility: visible;
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+    &:hover,
+    &:focus {
+      .dropdown-menu {
+        animation-duration: 0.5s;
+        animation-fill-mode: both;
+        animation-name: fadeInUp !important;
+        @media (min-width: 768px) {
+          display: block;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .dropdown-menu {
+        animation-name: unset !important;
+        box-shadow: none;
+        text-align: center;
+        background-color: #f0f5f4;
+        margin: 10px 0;
+      }
+      &:hover {
+        .dropdown-menu {
+          animation-name: unset !important;
+        }
+      }
+    }
+  }
 }
-
-
+#globe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  canvas {
+    width: 100%;
+  }
+}
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

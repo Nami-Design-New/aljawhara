@@ -4,11 +4,11 @@ $(document).ready(function () {
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-      $("Header").css({
+      $("header").css({
         top: "0px",
       });
     } else {
-      $("Header").css({
+      $("header").css({
         top: "-100%",
       });
     }
