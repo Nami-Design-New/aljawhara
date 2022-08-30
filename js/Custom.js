@@ -1,26 +1,26 @@
 $(document).ready(function () {
   // navbar hide in scroll down
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
-      $("header").css({
-        top: "0px",
-      });
-    } else {
-      $("header").css({
-        top: "-100%",
-      });
-    }
-    prevScrollpos = currentScrollPos;
-  };
+  // var prevScrollpos = window.pageYOffset;
+  // window.onscroll = function () {
+  //   var currentScrollPos = window.pageYOffset;
+  //   if (prevScrollpos > currentScrollPos) {
+  //     $("header").css({
+  //       top: "0px",
+  //     });
+  //   } else {
+  //     $("header").css({
+  //       top: "-100%",
+  //     });
+  //   }
+  //   prevScrollpos = currentScrollPos;
+  // };
   //navbar ainmation
   $(window).scroll(function () {
     var appScroll = $(document).scrollTop();
     if (appScroll >= 60) {
-      $("header").addClass("navAnimate");
+      $("header .navbar").addClass("headerAnimate");
     } else {
-      $("header").removeClass("navAnimate");
+      $("header .navbar").removeClass("headerAnimate");
     }
   });
 });
