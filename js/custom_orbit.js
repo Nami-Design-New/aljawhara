@@ -36,7 +36,7 @@
       // - Material that the dots will be made of.
       const pointGeometry = new THREE.SphereGeometry(0.5, 1, 1);
       const pointMaterial = new THREE.MeshBasicMaterial({
-        color: "#989db5",
+        color: "#09463f",
       });
       for (let point of points) {
         const { x, y, z } = convertFlatCoordsToSphereCoords(

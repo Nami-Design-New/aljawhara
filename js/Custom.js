@@ -23,6 +23,27 @@ $(document).ready(function () {
       $("header .navbar").removeClass("headerAnimate");
     }
   });
+
+  //MainSlider
+  var mainSlider = new Swiper(".mainSliderContainer", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    // effect: "fade",
+    speed: 500,
+    autoplay: {
+      delay: 8000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".mainsliderPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".mainSliderNext",
+      prevEl: ".mainsliderPrev",
+    },
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
