@@ -17,13 +17,12 @@ $(document).ready(function () {
   //navbar ainmation
   $(window).scroll(function () {
     var appScroll = $(document).scrollTop();
-    if (appScroll >= 20) {
+    if (appScroll >= 80) {
       $("header .navbar").addClass("headerAnimate");
     } else {
       $("header .navbar").removeClass("headerAnimate");
     }
   });
-
   //MainSlider
   var mainSlider = new Swiper(".mainSliderContainer", {
     spaceBetween: 0,
@@ -44,6 +43,46 @@ $(document).ready(function () {
       prevEl: ".mainsliderPrev",
     },
   });
+  // services slider
+  var servicesSlider = new Swiper(".servicesSlider", {
+    navigation: {
+      nextEl: ".servicesSliderNext",
+      prevEl: ".servicesSliderPrev",
+    },
+    pagination: {
+      el: ".servicesSlidePagination",
+      clickable: true,
+    },
+    spaceBetween: 30,
+    speed: 500,
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
+    slidesPerView: 'auto',
+    // breakpoints: {
+    //   0: {
+    //     slidesPerView: 1,
+    //   },
+    //   576: {
+    //     slidesPerView: 2,
+    //   },
+    //   768: {
+    //     slidesPerView: 3,
+    //   },
+    //   1024: {
+    //     slidesPerView: 4,
+    //   },
+    // },
+  });
+  $(".servicesSlider").hover(
+    function () {
+      this.swiper.autoplay.stop();
+    },
+    function () {
+      this.swiper.autoplay.start();
+    }
+  );
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////
