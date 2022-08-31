@@ -465,7 +465,7 @@ header {
           line-height: 26px;
           margin-bottom: 5px;
           color: $black-color;
-          padding: 5px 0;
+          padding: 12px 0;
           transition: $transition;
           &:hover {
             color: $secondColor;
@@ -579,6 +579,9 @@ header {
 .mainSection {
   position: relative;
   min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .mainSlider {
     position: relative;
     .mainSliderContainer {
@@ -591,6 +594,8 @@ header {
           @media (max-width: 768px) {
             margin-right: 0px;
             text-align: center;
+            padding: 30px 10px;
+
           }
           .hint {
             color: $text-color;
@@ -664,9 +669,12 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  max-height: 500px;
+  height: 500px;
   padding: 20px 0;
+  @media (max-width: 768px) {
+    height: 300px;
+
+  }
   canvas {
     width: 100%;
     height: 100%;
