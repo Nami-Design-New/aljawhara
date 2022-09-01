@@ -1309,7 +1309,9 @@ header {
 
 .statistics {
   padding-bottom: 30px;
-
+  @media (max-width: 768px) {
+    padding: 0px 10px;
+  }
   .container {
     background: linear-gradient(45deg, #dcb06590, #dcb06551),
       url(../img/statistics.jpg);
@@ -1317,9 +1319,7 @@ header {
     background-position: bottom;
     border-radius: 24px;
     padding: 40px 0;
-    @media (max-width: 768px) {
-      padding: 40px 0;
-    }
+  
   }
   .specifications {
     padding: 30px;
@@ -1327,6 +1327,8 @@ header {
     height: 100%;
     transition: $transition;
     display: flex;
+    align-items: center;
+
     i {
       font-size: 60px;
       color: $mainColor;
@@ -1354,6 +1356,17 @@ header {
       h1 {
         color: $secondColor;
       }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 10px;
+      text-align: center;
+      i{
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+      text-align: center;
     }
   }
 }

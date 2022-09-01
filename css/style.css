@@ -1486,6 +1486,11 @@ header .headerAnimate {
 .statistics {
   padding-bottom: 30px;
 }
+@media (max-width: 768px) {
+  .statistics {
+    padding: 0px 10px;
+  }
+}
 .statistics .container {
   background: linear-gradient(45deg, rgba(220, 176, 101, 0.5647058824), rgba(220, 176, 101, 0.3176470588)), url(../img/statistics.jpg);
   background-size: contain;
@@ -1493,17 +1498,13 @@ header .headerAnimate {
   border-radius: 24px;
   padding: 40px 0;
 }
-@media (max-width: 768px) {
-  .statistics .container {
-    padding: 40px 0;
-  }
-}
 .statistics .specifications {
   padding: 30px;
   border-radius: 16px;
   height: 100%;
   transition: all 0.3s ease-in-out;
   display: flex;
+  align-items: center;
 }
 .statistics .specifications i {
   font-size: 60px;
@@ -1532,6 +1533,19 @@ header .headerAnimate {
 .statistics .specifications:hover h6,
 .statistics .specifications:hover h1 {
   color: #dcb065;
+}
+@media (max-width: 768px) {
+  .statistics .specifications {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 10px;
+    text-align: center;
+    text-align: center;
+  }
+  .statistics .specifications i {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
 }
 
 /* PC device :991px. */
