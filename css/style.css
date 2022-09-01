@@ -286,25 +286,8 @@ span.select2.select2-container.select2-container--default {
     height: 40px;
   }
 }
-.introjs-helperLayer {
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961) !important;
-  background-color: #ffffff !important;
-  transform: scale(1.05) !important;
-  border-radius: 16px;
-}
-
-.introjs-button {
-  border-radius: 16px !important;
-  padding: 8px 24px !important;
-  text-shadow: none;
-  border: none;
-}
-.introjs-button.introjs-nextbutton {
-  background-color: #dcb065;
-  color: #ffffff;
-}
-.introjs-button.introjs-donebutton {
-  background-color: #09463f;
+.odometer-inside {
+  direction: ltr !important;
 }
 
 .loader {
@@ -1140,6 +1123,7 @@ header .headerAnimate {
 .SectionTitle {
   position: relative;
   padding: 30px;
+  text-align: center;
 }
 .SectionTitle .title {
   font-weight: bold;
@@ -1497,6 +1481,57 @@ header .headerAnimate {
 }
 .steps .allSteps .step:hover .icon::after {
   transform: skewX(-25deg) rotateX(30deg) rotateY(8deg);
+}
+
+.statistics {
+  padding-bottom: 30px;
+}
+.statistics .container {
+  background: linear-gradient(45deg, rgba(220, 176, 101, 0.5647058824), rgba(220, 176, 101, 0.3176470588)), url(../img/statistics.jpg);
+  background-size: contain;
+  background-position: bottom;
+  border-radius: 24px;
+  padding: 40px 0;
+}
+@media (max-width: 768px) {
+  .statistics .container {
+    padding: 40px 0;
+  }
+}
+.statistics .specifications {
+  padding: 30px;
+  border-radius: 16px;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+}
+.statistics .specifications i {
+  font-size: 60px;
+  color: #09463f;
+  transition: all 0.3s ease-in-out;
+  display: block;
+}
+.statistics .specifications h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #09463f;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  font-size: 32px !important;
+  text-align: right;
+}
+.statistics .specifications h6 {
+  color: #09463f;
+  transition: all 0.3s ease-in-out;
+}
+.statistics .specifications:hover {
+  background-color: #09463f;
+  transform: translateY(-5px);
+}
+.statistics .specifications:hover i,
+.statistics .specifications:hover h6,
+.statistics .specifications:hover h1 {
+  color: #dcb065;
 }
 
 /* PC device :991px. */

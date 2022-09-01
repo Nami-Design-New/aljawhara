@@ -277,27 +277,8 @@ span.select2.select2-container.select2-container--default {
     height: 40px;
   }
 }
-
-
-.introjs-helperLayer{
-  box-shadow: $BigShadow !important;
-  background-color: $white-color !important;
-  transform: scale(1.05) !important;
-  border-radius: 16px;
-}
-.introjs-button{
-  border-radius: 16px !important;
-  padding: 8px 24px !important;
-  text-shadow: none;
-  border: none;
-
-  &.introjs-nextbutton{
-    background-color: $secondColor;
-    color: $white-color;
-  }
-  &.introjs-donebutton{
-    background-color: $mainColor;
-  }
+.odometer-inside {
+  direction: ltr !important;
 }
 /////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -984,6 +965,7 @@ header {
 .SectionTitle {
   position: relative;
   padding: 30px;
+  text-align: center;
   .title {
     font-weight: bold;
     font-size: 50px !important;
@@ -1116,9 +1098,13 @@ header {
     flex-direction: column;
   }
 }
-
 .countries {
   padding-bottom: 50px;
+  // .container {
+  //   background-color: $white-color;
+  //   border-radius: 24px;
+  //   padding: 10px 20px 50px;
+  // }
   .allCountries {
     margin-top: 30px;
   }
@@ -1134,13 +1120,11 @@ header {
     text-align: center;
     transition: $transition;
     background-image: linear-gradient(-45deg, #dcb06530, #dcb06510);
-
     &:hover {
       box-shadow: 6px 10px 15px #dddde3, -10px -12px 15px #ffffff;
       z-index: 1;
       background-color: $white-color;
     }
-
     img {
       width: 80px;
       height: 80px;
@@ -1162,7 +1146,6 @@ header {
     }
   }
 }
-
 .steps {
   padding: 50px 0 30px;
   .allSteps {
@@ -1172,7 +1155,6 @@ header {
     text-align: center;
     position: relative;
     transition: $transition;
-
     @media (max-width: 678px) {
       flex-direction: column;
     }
@@ -1314,14 +1296,63 @@ header {
           }
         }
       }
-
       &:hover {
         .icon {
-
           &::after {
             transform: skewX(-25deg) rotateX(30deg) rotateY(8deg);
           }
         }
+      }
+    }
+  }
+}
+
+.statistics {
+  padding-bottom: 30px;
+
+  .container {
+    background: linear-gradient(45deg, #dcb06590, #dcb06551),
+      url(../img/statistics.jpg);
+    background-size: contain;
+    background-position: bottom;
+    border-radius: 24px;
+    padding: 40px 0;
+    @media (max-width: 768px) {
+      padding: 40px 0;
+    }
+  }
+  .specifications {
+    padding: 30px;
+    border-radius: 16px;
+    height: 100%;
+    transition: $transition;
+    display: flex;
+    i {
+      font-size: 60px;
+      color: $mainColor;
+      transition: $transition;
+      display: block;
+    }
+    h1 {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: $mainColor;
+      transition: $transition;
+      display: block;
+      font-size: 32px !important;
+      text-align: right;
+    }
+    h6 {
+      color: $mainColor;
+      transition: $transition;
+    }
+    &:hover {
+      background-color: $mainColor;
+      transform: translateY(-5px);
+      i,
+      h6,
+      h1 {
+        color: $secondColor;
       }
     }
   }

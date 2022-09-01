@@ -404,3 +404,27 @@ tr.introjs-showElement > th {
   opacity: 0;
 }
 /*# sourceMappingURL=introjs.min.css.map */
+
+
+
+.introjs-helperLayer {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961) !important;
+  background-color: #ffffff !important;
+  transform: scale(1.05) !important;
+  border-radius: 16px;
+}
+
+.introjs-button {
+  border-radius: 16px !important;
+  padding: 8px 24px !important;
+  text-shadow: none;
+  border: none;
+}
+.introjs-button.introjs-nextbutton {
+  background-color: #dcb065;
+  color: #ffffff;
+}
+.introjs-button.introjs-donebutton {
+  background-color: #09463f;
+}
+
