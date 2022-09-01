@@ -85,7 +85,7 @@ img {
 }
 
 body {
-  background-color: #fdfdfd;
+  background-color: #f3f3f9;
 }
 
 content {
@@ -359,7 +359,7 @@ header {
   left: 0;
   z-index: 1024;
   transition: all 0.3s ease-in-out;
-  background-color: #fdfdfd;
+  background-color: #f3f3f9;
 }
 header .navbar {
   padding: 20px 10px;
@@ -476,7 +476,7 @@ header .navbar .sideMenu {
   right: -100%;
   top: 0;
   height: 100%;
-  background-color: #fdfdfd;
+  background-color: #f3f3f9;
   padding: 50px 24px;
   transition: all 0.3s ease-in-out;
   width: 100%;
@@ -1131,7 +1131,7 @@ header .headerAnimate {
 }
 @media (max-width: 768px) {
   .SectionTitle .title {
-    font-size: 24px !important;
+    font-size: 28px !important;
   }
 }
 .SectionTitle .hint {
@@ -1139,7 +1139,7 @@ header .headerAnimate {
 }
 
 .services {
-  padding: 50px 0;
+  padding-top: 50px;
 }
 .services .swiper-wrapper {
   padding: 30px 0px 80px;
@@ -1264,7 +1264,7 @@ header .headerAnimate {
 }
 
 .countries {
-  padding: 50px 0;
+  padding-bottom: 50px;
 }
 .countries .allCountries {
   margin-top: 30px;
@@ -1276,18 +1276,18 @@ header .headerAnimate {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 16px;
+  border-radius: 24px;
   margin-top: 60px;
-  border: 1px dashed #d7d7d7;
   text-align: center;
   transition: all 0.3s ease-in-out;
+  background: rgba(220, 176, 101, 0.1254901961);
 }
 .countries .country:hover {
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
+  box-shadow: 6px 10px 15px #dddde3, -10px -12px 15px #ffffff;
   z-index: 1;
+  background-color: #ffffff;
 }
 .countries .country img {
-  border: 1px dashed #d7d7d7;
   width: 80px;
   height: 80px;
   -o-object-fit: cover;
