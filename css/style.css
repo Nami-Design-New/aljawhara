@@ -175,6 +175,27 @@ span.select2.select2-container.select2-container--default {
   position: relative;
   display: flex;
 }
+.swiperBtns .swiper-pagination {
+  margin: 0px 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: unset;
+  bottom: unset;
+  right: unset;
+  left: unset;
+  color: #09463f;
+}
+.swiperBtns .swiper-pagination .swiper-pagination-current {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px 8px;
+}
+.swiperBtns .swiper-pagination .swiper-pagination-total {
+  font-size: 20px;
+  margin: 0px 8px;
+  opacity: 0.6;
+}
 .swiperBtns .swiper-button-next,
 .swiperBtns .swiper-button-prev {
   position: relative;
@@ -188,18 +209,19 @@ span.select2.select2-container.select2-container--default {
   align-items: center;
   justify-content: center;
   color: #09463f;
+  width: auto;
   transition: all 0.3s ease-in-out;
 }
 .swiperBtns .swiper-button-next::after,
 .swiperBtns .swiper-button-prev::after {
-  font-size: 36px;
+  font-size: 60px;
   font-family: "Font Awesome 6 pro";
-  font-weight: 300;
+  font-weight: 200;
 }
 @media (max-width: 768px) {
   .swiperBtns .swiper-button-next::after,
 .swiperBtns .swiper-button-prev::after {
-    font-size: 28px;
+    font-size: 44px;
   }
 }
 .swiperBtns .swiper-button-next:hover,
@@ -1128,8 +1150,13 @@ header .headerAnimate {
 .services .swiper-wrapper .swiper-slide:nth-child(even) {
   margin-top: 40px;
 }
+@media (max-width: 768px) {
+  .services .swiper-wrapper .swiper-slide:nth-child(even) {
+    margin-top: unset;
+  }
+}
 
-.service {
+.flipCard {
   width: 100%;
   height: 400px;
   width: 300px;
@@ -1140,7 +1167,7 @@ header .headerAnimate {
   flex-shrink: 0;
   perspective: 1000px;
 }
-.service .cardFront {
+.flipCard .cardFront {
   width: 100%;
   height: 100%;
   padding: 20px;
@@ -1156,7 +1183,7 @@ header .headerAnimate {
   transform: rotateY(0deg);
   transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.service .cardFront .content {
+.flipCard .cardFront .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1164,19 +1191,19 @@ header .headerAnimate {
   margin-top: auto;
   color: #ffffff;
 }
-.service .cardFront .content h3 {
+.flipCard .cardFront .content h3 {
   font-weight: bold;
 }
-.service .cardFront .content .animatedLink {
+.flipCard .cardFront .content .animatedLink {
   color: #ffffff;
 }
-.service .cardFront .content .animatedLink i {
+.flipCard .cardFront .content .animatedLink i {
   font-size: 24px;
 }
-.service .cardFront .content .animatedLink span {
+.flipCard .cardFront .content .animatedLink span {
   border-color: #ffffff;
 }
-.service .cardBack {
+.flipCard .cardBack {
   padding: 20px;
   position: absolute;
   border-radius: 20px;
@@ -1189,38 +1216,38 @@ header .headerAnimate {
   box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.0509803922);
   background-color: #fff;
 }
-.service .cardBack .content {
+.flipCard .cardBack .content {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
-.service .cardBack .content img {
+.flipCard .cardBack .content img {
   width: 64px;
   height: 64px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 30px;
 }
-.service .cardBack .content h3 {
+.flipCard .cardBack .content h3 {
   font-weight: bold;
   color: #09463f;
   margin-bottom: 15px;
 }
-.service .cardBack .content p {
+.flipCard .cardBack .content p {
   color: #777777;
 }
-.service .cardBack .content a {
+.flipCard .cardBack .content a {
   margin-top: auto;
   margin-right: auto;
 }
-.service:hover {
+.flipCard:hover {
   z-index: 2;
 }
-.service:hover .cardFront {
+.flipCard:hover .cardFront {
   transform: rotateY(-180deg);
 }
-.service:hover .cardBack {
+.flipCard:hover .cardBack {
   transform: rotateY(0deg);
 }
 
@@ -1234,6 +1261,52 @@ header .headerAnimate {
   .sectionTop {
     flex-direction: column;
   }
+}
+
+.countries {
+  padding: 50px 0;
+}
+.countries .allCountries {
+  margin-top: 30px;
+}
+.countries .country {
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  margin-top: 60px;
+  border: 1px dashed #d7d7d7;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.countries .country:hover {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1254901961);
+  z-index: 1;
+}
+.countries .country img {
+  border: 1px dashed #d7d7d7;
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin: auto;
+  margin-top: -50px;
+  margin-bottom: 20px;
+  border-radius: 100px;
+}
+.countries .country h2 {
+  font-weight: bold;
+  color: #09463f;
+  margin-bottom: 20px;
+}
+.countries .country p {
+  color: #777;
+  margin-bottom: 20px;
 }
 
 /* PC device :991px. */

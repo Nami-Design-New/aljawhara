@@ -51,29 +51,16 @@ $(document).ready(function () {
     },
     pagination: {
       el: ".servicesSlidePagination",
-      clickable: true,
+      type: "fraction",
     },
+    loop: true,
     spaceBetween: 30,
-    speed: 500,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
-    slidesPerView: 'auto',
-    // breakpoints: {
-    //   0: {
-    //     slidesPerView: 1,
-    //   },
-    //   576: {
-    //     slidesPerView: 2,
-    //   },
-    //   768: {
-    //     slidesPerView: 3,
-    //   },
-    //   1024: {
-    //     slidesPerView: 4,
-    //   },
-    // },
+    speed: 1000,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    slidesPerView: "auto",
   });
   $(".servicesSlider").hover(
     function () {
@@ -120,6 +107,20 @@ $(document).ready(function () {
     easing: "linear",
     once: true,
   });
+  //aos Delay
+  function aosDelay() {
+    var class_ = "mainSection";
+    $("section").each(function (i) {
+      class_ = $(this).attr("class");
+      $("." + class_ + " div[data-aos]").each(function (i) {
+        var d = 0;
+        d = i * 100;
+        $(this).attr("data-aos-delay", d);
+        d = 0;
+      });
+    });
+  }
+  aosDelay();
   // tooltip
   var tooltipTriggerList = [].slice.call(
     document.querySelectorAll('[data-bs-toggle="tooltip"]')
