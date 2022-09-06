@@ -124,7 +124,7 @@ $(document).ready(function () {
     offset: 60,
     delay: 50,
     duration: 500,
-    easing: "linear",
+    // easing: "linear",
     once: true,
   });
   //aos Delay

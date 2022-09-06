@@ -1268,15 +1268,26 @@ header .headerAnimate {
 .countries {
   padding: 70px 0 50px;
   background: linear-gradient(45deg, rgba(243, 243, 249, 0.9098039216), rgba(243, 243, 249, 0.9607843137)), url(../img/countries.webp);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+}
+@media (max-width: 768px) {
+  .countries {
+    background-size: contain;
+  }
 }
 .countries .allCountries {
   margin-top: 30px;
 }
+@media (max-width: 768px) {
+  .countries .allCountries {
+    margin-top: 0;
+  }
+}
 .countries .country {
   position: relative;
+  isolation: isolate;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -1667,13 +1678,19 @@ header .headerAnimate {
 
 .recruitments {
   padding: 50px 0;
+  background: linear-gradient(45deg, rgba(2, 98, 87, 0.9411764706), rgba(0, 69, 61, 0.9803921569)), url(../img/s3.webp), url(../img/service1.webp);
+  background-attachment: fixed;
+  background-size: cover;
+}
+.recruitments .SectionTitle h1 {
+  color: #dcb065 !important;
 }
 .recruitments .recruitmentsteps {
   position: relative;
   justify-content: center;
 }
 .recruitments .recruitmentsteps .rStep {
-  background-color: #eee6dd;
+  background-color: #09463f;
   padding: 20px;
   width: 200px;
   height: 200px;
@@ -1694,7 +1711,7 @@ header .headerAnimate {
   transform: translateX(-50%) translateY(-50%) rotate(45deg);
   width: 100%;
   height: 100%;
-  background-color: #eee6dd;
+  background-color: #09463f;
   z-index: -1;
   border-radius: 16px;
   transition: all 0.3s ease-in-out;
@@ -1707,7 +1724,7 @@ header .headerAnimate {
   transform: translateY(-50%);
   width: 100%;
   height: 1px;
-  border: 1px dashed #09463f;
+  border: 1px dashed #dcb065;
   z-index: -2;
 }
 .recruitments .recruitmentsteps .rStep .num {
@@ -1717,15 +1734,18 @@ header .headerAnimate {
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  background-color: #09463f;
-  color: #ffffff;
+  background-color: #dcb065;
+  color: #09463f;
   margin-bottom: 20px;
   font-weight: bold;
 }
 .recruitments .recruitmentsteps .rStep h5 {
   font-weight: bold;
-  color: #09463f;
+  color: #dcb065;
   margin-bottom: 10px;
+}
+.recruitments .recruitmentsteps .rStep p {
+  color: #dcdcdc;
 }
 .recruitments .recruitmentsteps .rStep:hover::before {
   transform: translateX(-50%) translateY(-50%) rotate(60deg);

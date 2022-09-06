@@ -599,7 +599,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-
   .mainSlider {
     position: relative;
     .mainSliderContainer {
@@ -1101,16 +1100,23 @@ header {
 }
 .countries {
   padding: 70px 0 50px;
-
-  background: linear-gradient(45deg, #F3F3F9e8, #F3F3F9f5), url(../img/countries.webp);
-  background-size: contain;
+  background: linear-gradient(45deg, #f3f3f9e8, #f3f3f9f5),
+    url(../img/countries.webp);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  @media (max-width: 768px) {
+    background-size: contain;
+  }
   .allCountries {
     margin-top: 30px;
+    @media (max-width: 768px) {
+      margin-top: 0;
+    }
   }
   .country {
     position: relative;
+    isolation: isolate;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -1307,7 +1313,6 @@ header {
     }
   }
 }
-
 .statistics {
   padding-bottom: 30px;
   @media (max-width: 768px) {
@@ -1328,7 +1333,6 @@ header {
     transition: $transition;
     display: flex;
     align-items: center;
-
     i {
       font-size: 60px;
       color: $mainColor;
@@ -1478,16 +1482,23 @@ header {
     }
   }
 }
-
 .recruitments {
   padding: 50px 0;
+  background: linear-gradient(45deg, #026257f0, #00453dfa), url(../img/s3.webp),
+    url(../img/service1.webp);
+  background-attachment: fixed;
+  background-size: cover;
+  .SectionTitle {
+    h1 {
+      color: $secondColor !important;
+    }
+  }
   .recruitmentsteps {
     position: relative;
     justify-content: center;
     // flex-wrap: wrap;
-
     .rStep {
-      background-color: #eee6dd;
+      background-color: #09463f;
       padding: 20px;
       width: 200px;
       height: 200px;
@@ -1508,7 +1519,7 @@ header {
         transform: translateX(-50%) translateY(-50%) rotate(45deg);
         width: 100%;
         height: 100%;
-        background-color: #eee6dd;
+        background-color: #09463f;
         z-index: -1;
         border-radius: 16px;
         transition: $transition;
@@ -1521,10 +1532,9 @@ header {
         transform: translateY(-50%);
         width: 100%;
         height: 1px;
-        border: 1px dashed $mainColor;
+        border: 1px dashed $secondColor;
         z-index: -2;
       }
-
       .num {
         min-width: 48px;
         min-height: 48px;
@@ -1532,23 +1542,26 @@ header {
         justify-content: center;
         align-items: center;
         border-radius: 16px;
-        background-color: $mainColor;
-        color: $white-color;
+        background-color: $secondColor;
+        color: $mainColor;
         margin-bottom: 20px;
         font-weight: bold;
       }
       h5 {
         font-weight: bold;
-        color: $mainColor;
+        color: $secondColor;
         margin-bottom: 10px;
+      }
+      p{
+        color: #dcdcdc;
       }
       &:hover {
         &::before {
           transform: translateX(-50%) translateY(-50%) rotate(60deg);
         }
       }
-    }
 
+    }
     .rCol {
       &:last-child,
       &:nth-child(4n) {
@@ -1558,7 +1571,6 @@ header {
           }
         }
       }
-
       @media (max-width: 992px) {
         &:nth-child(2n) {
           .rStep {
@@ -1590,7 +1602,6 @@ header {
     }
   }
 }
-
 .footer {
   background-color: #c7d2d6;
   background-size: cover;
@@ -1774,7 +1785,6 @@ header {
       }
     }
   }
-
   .socialIcons {
     padding: 0;
     margin: 0;
@@ -1798,7 +1808,6 @@ header {
     }
   }
 }
-
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================
