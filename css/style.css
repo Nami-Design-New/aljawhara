@@ -2138,6 +2138,7 @@ header .headerAnimate {
 
 .contactCustomerService {
   padding: 70px 0;
+  margin-top: 100px;
 }
 
 .selectedCustomer {
@@ -2703,12 +2704,12 @@ header .headerAnimate {
   margin-left: 20px;
 }
 .profileContent .newOrder:hover {
-  background: #dcb065;
+  background: #eee;
   color: #09463f;
 }
 .profileContent .order {
   background-color: #fff;
-  border: 1px solid #dcb065;
+  border: 1px solid #eee;
 }
 .profileContent .order .workerCvSlider {
   padding-bottom: 0px;
@@ -2762,7 +2763,7 @@ header .headerAnimate {
   flex-wrap: wrap;
   align-items: center;
   padding: 5px;
-  background-color: #dcb065;
+  background-color: #C7D2D6;
 }
 .profileContent .order .profileCustomerInfo .info {
   display: flex;
@@ -2982,10 +2983,11 @@ header .headerAnimate {
   background-color: #ffffff;
   margin-bottom: 20px;
   border-radius: 10px;
+  isolation: isolate;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
 }
 .editProfile .head {
-  background-color: #dcb065;
+  background-color: #C7D2D6;
   color: #09463f;
   margin-bottom: 20px;
   padding: 20px;
@@ -4067,6 +4069,51 @@ header .headerAnimate {
 .recruitmentContract .container .links a:hover {
   background-color: #09463f;
   color: #dcb065;
+}
+
+.recruitmentRequest {
+  padding: 50px 0;
+}
+.recruitmentRequest .headTitle h2 {
+  font-size: 30px !important;
+}
+@media (max-width: 768px) {
+  .recruitmentRequest .headTitle h2 {
+    font-size: 20px !important;
+  }
+}
+.recruitmentRequest .headTitle p {
+  color: #777;
+}
+.recruitmentRequest .formCard {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1254901961);
+  border-radius: 4px;
+  isolation: isolate;
+}
+.recruitmentRequest .formCard .head {
+  background-color: #C7D2D6;
+  padding: 10px 20px;
+  color: #09463f;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.recruitmentRequest .formCard .select2-container--default .select2-selection--single {
+  border-color: #ced4da;
+}
+.recruitmentRequest .hint {
+  color: #777;
+  font-size: 10px;
+}
+.recruitmentRequest .hint a {
+  font-weight: bold;
+  color: #09463f;
+  font-size: 10px !important;
+}
+.recruitmentRequest .form-check-label {
+  font-size: small;
 }
 
 /* PC device :991px. */

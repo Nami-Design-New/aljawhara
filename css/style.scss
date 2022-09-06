@@ -1958,6 +1958,7 @@ header {
 }
 .contactCustomerService {
   padding: 70px 0;
+  margin-top: 100px;
 }
 .selectedCustomer {
   border-radius: 8px;
@@ -2516,13 +2517,13 @@ header {
       margin-left: 20px;
     }
     &:hover {
-      background: $secondColor;
+      background: #eee;
       color: $mainColor;
     }
   }
   .order {
     background-color: #fff;
-    border: 1px solid $secondColor;
+    border: 1px solid #eee;
     .workerCvSlider {
       padding-bottom: 0px;
       img {
@@ -2572,7 +2573,7 @@ header {
       flex-wrap: wrap;
       align-items: center;
       padding: 5px;
-      background-color: $secondColor;
+      background-color: #C7D2D6;
       .info {
         display: flex;
         align-items: center;
@@ -2798,9 +2799,10 @@ header {
   background-color: $white-color;
   margin-bottom: 20px;
   border-radius: 10px;
+  isolation: isolate;
   box-shadow: $shadow;
   .head {
-    background-color: $secondColor;
+    background-color: #C7D2D6;
     color: $mainColor;
     margin-bottom: 20px;
     padding: 20px;
@@ -3865,6 +3867,51 @@ header {
   }
 }
 
+
+.recruitmentRequest {
+  padding: 50px 0;
+  .headTitle {
+    h2 {
+      font-size: 30px !important;
+      @media (max-width: 768px) {
+        font-size: 20px !important;
+      }
+    }
+    p {
+      color: #777;
+    }
+  }
+  .formCard {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: $shadow;
+    border-radius: 4px;
+    isolation: isolate;
+    .head {
+      background-color: #C7D2D6;
+      padding: 10px 20px;
+      color: $mainColor;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+    .select2-container--default .select2-selection--single {
+      border-color: #ced4da;
+    }
+  }
+  .hint {
+    color: #777;
+    font-size: 10px;
+    a {
+      font-weight: bold;
+      color: $mainColor;
+      font-size: 10px !important;
+    }
+  }
+  .form-check-label {
+    font-size: small;
+  }
+}
 
 // //////////////////////////////////////////==================
 // //////////////////////////////////////////==================

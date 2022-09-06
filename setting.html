@@ -61,18 +61,95 @@
   <!--((((((((((((((((((( content )))))))))))))))))))-->
   <!--(((((((((((((((((((((((()))))))))))))))))))))))-->
   <content>
-    <!-- ================ banner ================= -->
-    <div class="banner">
-      <h1> وصول العمالة </h1>
-      <ul>
-        <li> <a href="index.html">الرئيسية </a> </li>
-        <li> <a href="#!" class="active"> وصول العمالة </a> </li>
-      </ul>
-    </div>
-    <!-- ================  / banner ================= -->
+    <!-- ================ profile ================= -->
+    <section class="profile">
+      <div class="container ">
+        <!-- user Header  -->
+        <div class=" userHeader">
+          <div class="userInfo">
+            <div class="d-flex flex-wrap align-items-center">
+              <img src="img/avatar.webp" alt="" class="me-3">
+              <div class="userName">
+                <h3>محمود جمال الكومي</h3>
+                <p> 0555489846 </p>
+              </div>
+            </div>
+            <div class="control">
+              <a href="index.html" data-bs-toggle="tooltip" title=" تسجيل الخروج "><i class="fas fa-power-off"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- /user Header  -->
+        <div class="row">
+          <!-- links -->
+          <div class="col-md-4 col-lg-3 p-1">
+            <div class="profileNavCol">
+              <a href="profile.html"> <i class="fa-solid fa-user-hair-mullet me-2"></i> طلبات الاستقدام </a>
+              <a href="last-orders.html"> <i class="fa-solid fa-user-headset me-2"></i> سجل الطلبات </a>
+              <a href="chat.html"> <i class="fa-solid fa-comments me-2"></i> سجل المحادثات </a>
+              <a href="notification.html"> <i class="fas fa-bell me-2"></i> الاشعارات </a>
+              <a class="active" href="setting.html"><i class="fas fa-cog me-2"></i> اعدادات الحساب </a>
+              <a href="index.html"><i class="fas fa-power-off me-2"></i> تسجيل الخروج </a>
+            </div>
+          </div>
+          <!-- content -->
+          <div class=" col-md-8 col-lg-9 p-2 profileContent">
+            <div class="editProfile">
+              <div class="head">
+                <h5> <i class="fas fa-user me-2"></i> البيانات الشخصية </h5>
+              </div>
+              <form action="" class="row">
+                <div class="col-12 p-2">
+                  <label for="name" class="form-label"> <i class="fas fa-user me-2"></i> الاسم كامل </label>
+                  <input type="text" class="form-control" id="name" placeholder=" محمود جمال الكومي                  ">
+                </div>
+                <div class="col-md-12 p-2">
+                  <label class="form-label"> <i class="fas fa-city me-2"></i> المدينة </label>
+                  <select class="select2WithoutSearch">
+                    <option value=""> جدة </option>
+                    <option value=""> الرياض </option>
+                  </select>
+                </div>
+                <div class="col-md-6 p-2">
+                  <label for="password" class="form-label"> <i class="fas fa-key me-2"></i> الرقم السري </label>
+                  <input type="password" class="form-control" id="password" placeholder="*****">
+                </div>
+                <div class="col-md-6 p-2">
+                  <label for="repetPassword" class="form-label"> <i class="fas fa-key me-2"></i> تأكيد الرقم السري
+                  </label>
+                  <input type="password" class="form-control" id="repetPassword" placeholder="*****">
+                </div>
+                <div class="col-12 pt-4 p-2 text-center">
+                  <button type="submit" class="animatedLink">
+                    تأكيد
+                    <i class="fa-regular fa-left-long ms-2"><span></span></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!--  -->
+            <div class="editProfile">
+              <div class="head">
+                <h5> <i class="fas fa-key me-2"></i> إعدادات الهاتف </h5>
+              </div>
+              <form action="#!" class="row">
+                <div class="col-12 p-2">
+                  <label for="Phone" class="form-label"> <i class="fas fa-phone-alt me-2"></i> رقم الهاتف </label>
+                  <input type="number" class="form-control" id="Phone" placeholder="05***********">
+                </div>
+                <div class="col-12 pt-4 p-2 text-center">
+                  <button type="submit" class="animatedLink">
+                    تأكيد
+                    <i class="fa-regular fa-left-long ms-2"><span></span></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-    
 
 
 
