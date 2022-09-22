@@ -1495,7 +1495,7 @@ header .headerAnimate {
   }
 }
 .statistics .container {
-  background: linear-gradient(45deg, rgba(220, 176, 101, 0.5647058824), rgba(220, 176, 101, 0.3176470588)), url(../img/statistics.jpg);
+  background: linear-gradient(45deg, rgba(220, 176, 101, 0.5647058824), rgba(220, 176, 101, 0.3176470588)), url(../img/statistics.webp);
   background-size: contain;
   background-position: bottom;
   border-radius: 24px;
@@ -4255,7 +4255,7 @@ header .headerAnimate {
 .musaned {
   min-height: 80vh;
   padding: 100px 0;
-  background: linear-gradient(rgba(238, 238, 238, 0.6392156863), rgba(238, 238, 238, 0.8)), url(../img/musanedHead.jpg);
+  background: linear-gradient(rgba(238, 238, 238, 0.6392156863), rgba(238, 238, 238, 0.8)), url(../img/musanedHead.webp);
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -4418,7 +4418,7 @@ Keyframe Animation Area CSS
 
 .musanedRecruitment {
   padding: 70px 0;
-  background: linear-gradient(rgba(238, 238, 238, 0.6392156863), rgba(238, 238, 238, 0.8)), url(../img/musanedHead.jpg);
+  background: linear-gradient(rgba(238, 238, 238, 0.6392156863), rgba(238, 238, 238, 0.8)), url(../img/musanedHead.webp);
   background-size: cover;
   background-attachment: fixed;
 }
